@@ -1,7 +1,7 @@
 const WebSocket = require('ws');
 const messageHistory = require('./messageHistory');
 
-const wss = new WebSocket.Server({ port: 8080 });
+const wss = new WebSocket.Server({ noServer: true });
 
 wss.on('connection', (ws) => {
     console.log('New client connected');
